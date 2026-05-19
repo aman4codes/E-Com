@@ -12,13 +12,13 @@ app.use(cors());
 app.use(express.json());
 
 
-app.use("/api",authRoutes);
+app.use("/api", authRoutes);
 
-// app.get("/", (req, res) => {
-    //     res.send("Backend is working")
-    
-    // })
-    connectDB();
+app.get("/", (req, res) => {
+    res.send("Backend is working")
+
+})
+connectDB();
 
 app.listen(5001, () => {
     console.log(`Server is running on port 5001`);
